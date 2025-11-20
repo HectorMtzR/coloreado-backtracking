@@ -81,7 +81,7 @@ export default function MapColoringApp() {
     
     try {
       setStatusMsg("Conectando con el motor de Backtracking...");
-      const response = await axios.post('https://api-mapa-coloreado.onrender.com/', {
+      const response = await axios.post('https://api-mapa-coloreado.onrender.com/solve', {
         nodes: nodes.map(n => n.id),
         edges: edges,
         num_colors: parseInt(numColors) // Aseguramos que se envíe como entero
